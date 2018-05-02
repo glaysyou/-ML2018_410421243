@@ -49,7 +49,7 @@ img = np.zeros((300,400),int)
       
 for j in range(300):
     for i in range(400):
-        img[j][i] = (c[i][j]-w[0]*a[i][j]-w[1]*b[i][j])/w[2]
+        img[j][i] = (c[j][i]-w[0]*a[j][i]-w[1]*b[j][i])/w[2]
         
 scipy.misc.imsave('output.jpg', img)
 
