@@ -45,4 +45,11 @@ while epoch < maxlimit and abs(w[0] - temp_w0) > 0.00001 and abs(w[1] - temp_w1)
 
 print(w[0],w[1],w[2])
 
+img = np.zeros((300,400),int)
+      
+for j in range(300):
+    for i in range(400):
+        img[j][i] = (c[i][j]-w[0]*a[i][j]-w[1]*b[i][j])/w[2]
+        
+scipy.misc.imsave('output.jpg', img)
 
